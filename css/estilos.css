@@ -213,7 +213,9 @@ body {
     text-align: center;
     border-radius: 10px;
     width: 330px;
-    padding: 40px;
+    height: 490px; /* Establece la altura según la relación de aspecto deseada */
+    padding: 0px;
+    position: relative; /* Establece el posicionamiento relativo */
     --color-plan: #696871;
     --color-price: #1D293F;
     --bg-cta: #fff;
@@ -224,8 +226,10 @@ body {
 
 .price__element--best{
     width: 370px;
-    padding: 60px 40px;
+    height: 530px;
+    padding: 0px;
     background-color: #FF7143;
+    position: relative; /* Establece el posicionamiento relativo */
     --color-plan: rgb(255 255 255 / 75%);
     --color-price: #fff;
     --bg-cta: #9F3919;
@@ -255,23 +259,35 @@ body {
     color: var(--color-items);
 }
 
-.price__cta{
-    margin-top: 40px; /* Agrega espacio entre la imagen y el botón */
+.price__cta {
+    position: absolute; /* Establece el posicionamiento absoluto */
+    bottom: 25px; /* Ajusta la distancia desde abajo según tu preferencia */
+    left: 50%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Corrige la posición horizontal */
     display: block;
-    padding: 20px 0;
+    padding: 10px 0;
     border-radius: 10px;
     text-decoration: none;
-    background-color: var(--bg-cta);
-    font-weight: 600;
-    color: var(--color-cta);
-    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    color:lightslategray ;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    width: 40%; /* Establece el ancho del botón según tu preferencia */
+    box-shadow: 0 0 1px rgba(157, 157, 157, 0.5);
 }
 
+
 .price__element img {
-    width: 200px;
-    border-radius: 10px; /* Agrega esquinas redondeadas para que el efecto se vea mejor */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Añade un marco difuminado */
+    display: block;
+    border-radius: 10px;
+    margin: 0 auto; /* Asegura que la imagen esté centrada horizontalmente */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ajusta la altura proporcionalmente al ancho */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+
+
 }
+
+
 
 
 /* Testimony */
